@@ -1023,6 +1023,19 @@
             font-size: 1rem;
         }
 
+        /* CONTACT OVERLAY BOX */
+        .contact-overlay-box {
+            background: rgba(10, 10, 15, 0.4);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: 8px;
+            padding: 3rem 2rem;
+            max-width: 650px;
+            margin: 0 auto;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+        }
+
         /* CONTACT FORM */
         .contact-form {
             text-align: left;
@@ -1998,6 +2011,8 @@
                 <a href="#contact" class="btn btn-secondary">Contact Me</a>
                 <a href="https://github.com/adityA-SiNGH-Bais007" target="_blank" rel="noopener noreferrer"
                     class="btn btn-secondary">GitHub</a>
+                <a href="https://linkedin.com/in/aditya-singh-bais-b01b87256" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-secondary">LinkedIn</a>
             </div>
         </div>
         <div class="hero-scanlines">
@@ -2374,42 +2389,37 @@
             <h2>Let's build something.</h2>
             <p>I'm currently looking for new opportunities as a Data Engineer or Python Developer. Whether you have a
                 question or just want to say hi, my inbox is always open!</p>
-            <div class="contact-actions">
-                <a href="mailto:adityasbsinghbais7@gmail.com" class="email-link">adityasbsinghbais7@gmail.com</a>
-                <a href="https://linkedin.com/in/aditya-singh-bais-b01b87256" target="_blank" rel="noopener noreferrer"
-                    class="contact-social-btn">
-                    <svg class="icon">
-                        <path
-                            d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2a2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 2a2 2 0 1 1-2 2a2 2 0 0 1 2-2z" />
-                    </svg>
-                </a>
+            <div class="contact-overlay-box">
+                <div class="contact-actions">
+                    <a href="mailto:adityasbsinghbais7@gmail.com" class="email-link">adityasbsinghbais7@gmail.com</a>
+                </div>
+                <div class="contact-divider">or send a message</div>
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/mojrgjry" method="POST">
+                    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none !important"
+                        aria-hidden="true">
+                    <div class="form-group">
+                        <input type="text" id="contact-name" name="name" placeholder=" " required autocomplete="name" />
+                        <label for="contact-name">// Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="contact-email" name="email" placeholder=" " required autocomplete="email" />
+                        <label for="contact-email">// Email</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="contact-message" name="message" placeholder=" " required></textarea>
+                        <label for="contact-message">// Message</label>
+                    </div>
+                    <button type="submit" class="form-submit" id="formSubmitBtn">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            style="vertical-align: -2px; margin-right: 6px;">
+                            <path d="M22 2L11 13" />
+                            <path d="M22 2L15 22L11 13L2 9L22 2Z" />
+                        </svg>
+                        Send Message
+                    </button>
+                    <div class="form-status" id="formStatus" style="display: none;"></div>
+                </form>
             </div>
-            <div class="contact-divider">or send a message</div>
-            <form class="contact-form" id="contactForm" action="https://formspree.io/f/mojrgjry" method="POST">
-                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none !important"
-                    aria-hidden="true">
-                <div class="form-group">
-                    <input type="text" id="contact-name" name="name" placeholder=" " required autocomplete="name" />
-                    <label for="contact-name">// Name</label>
-                </div>
-                <div class="form-group">
-                    <input type="email" id="contact-email" name="email" placeholder=" " required autocomplete="email" />
-                    <label for="contact-email">// Email</label>
-                </div>
-                <div class="form-group">
-                    <textarea id="contact-message" name="message" placeholder=" " required></textarea>
-                    <label for="contact-message">// Message</label>
-                </div>
-                <button type="submit" class="form-submit" id="formSubmitBtn">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        style="vertical-align: -2px; margin-right: 6px;">
-                        <path d="M22 2L11 13" />
-                        <path d="M22 2L15 22L11 13L2 9L22 2Z" />
-                    </svg>
-                    Send Message
-                </button>
-                <div class="form-status" id="formStatus" style="display: none;"></div>
-            </form>
         </div>
     </section>
 
